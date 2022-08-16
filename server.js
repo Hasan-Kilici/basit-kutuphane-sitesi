@@ -162,7 +162,7 @@ app.get("/admin/home", (req, res) => {
     } else {
       res.redirect("/");
     }
-  });
+  }); 
 });
 //Book page
 app.get("/admin/book/:url/:token", (req, res) => {
