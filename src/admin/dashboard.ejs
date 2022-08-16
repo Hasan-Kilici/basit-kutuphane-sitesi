@@ -1,0 +1,23 @@
+<%- include("../partials/head") %>
+<%- include("../partials/adminnavbar") %>
+<br><br>
+<div class="container">
+<h4>Kitap Ekle</h4>
+<hr>
+<div class="card">
+<div class="card-body">
+<form method="POST" enctype="multipart/form-data" action="/add/book">
+<label>Başlık</label>
+<input type="text" id="title" name="title" class="form-control" required>
+<label>Açıklama</label>
+<input type="text" id="description" name="description" class="form-control" required>
+<label>URL</label>
+<input type="text" id="url" name="url" class="form-control" placeholder="lütfen oneline yazınız" required>
+<label>Kitap Kapak Fotoğrafı</label>
+<input class="form-control" type="file" class="form-control-file" name="uploaded_file" required><br> 
+<input type="submit" value="Kitap ekle" class="btn btn-dark">
+<input type="reset" value="Iptal" class="btn btn-danger">
+</form>  
+</div>  
+</div>  
+</div>
