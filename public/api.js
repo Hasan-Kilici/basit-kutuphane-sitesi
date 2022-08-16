@@ -50,6 +50,6 @@ let bookApi = {
   },
   data:{
   books :{},
-  book: {},
+  book: {}
   }
 };
