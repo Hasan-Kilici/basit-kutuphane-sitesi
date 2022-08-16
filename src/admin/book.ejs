@@ -1,0 +1,24 @@
+<%- include("../partials/head") %>
+<%- include("../partials/adminnavbar") %>
+<script>
+bookApi.data.book = {
+  <%= books.url %>:{
+    title:"<%= books.title %>",
+    description: `<%- books.description %>`,
+    id: "<%= books._id %>",
+    url: "<%= books.url %>",
+  }
+}  
+</script>  
+<br><br>
+<div class="container">
+<div class="row">
+ <div class="col-md-4">
+  <img style="width:100%;border-radius:8px" src="<%= books.photo %>"> 
+ </div>
+  <div class="col-md-8 pad-5">
+   <h4><%= books.title %></h4>
+     <label><%= books.description %></label>
+  </div>
+</div>
+</div>
