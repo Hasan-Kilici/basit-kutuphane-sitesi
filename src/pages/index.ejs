@@ -1,0 +1,33 @@
+<%- include("../partials/head") %>
+<%- include("../partials/navbar") %>
+<script>
+bookApi.data.books = {
+<% books.forEach( books =>{%>
+<%= books.url %>:{
+title: "<%= books.title %>",
+description: `<%- books.description %>`,
+id: "<%= books._id %>",
+url: "<%= books.url %>",
+}
+<% }) %>
+}  
+</script><br><br>
+<div class="container">
+<h4>Yeni Kitaplar</h4>
+<hr>
+<div class="row">
+<% books.forEach( books =>{ %>
+<a class="text-dark" style="text-decoration:none;" href="/book/<%= books.url %>/<%= books.token %>">
+<div class="col-md-2">
+<div class="card">
+<center><img src="<%= books.photo %>" class="card-img-top" style="width:94%;border-radius:8px;margin-top:1vh;"></center>
+<div class="card-body">
+<h5><%= books.title %></h5>
+<label><%= books.description %></label>
+</div>
+</div>
+</div>
+  </a>
+<% }) %> 
+</div> 
+</div>
